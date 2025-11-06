@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fCC Forum - TUI</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="title-bar">
+                <span class="prompt">$</span>
+                <span class="title">forum-tui --latest-topics</span>
+                <span class="cursor">_</span>
+            </div>
+        </header>
+
+        <main class="terminal-body">
+            <div class="app-header">
+                <h1 class="app-title">~/forum/freecodecamp</h1>
+                <div class="status-bar">
+                    <span class="status-item">ONLINE</span>
+                    <span class="status-item">v2.1.0</span>
+                    <span class="status-item">UTF-8</span>
+                </div>
+            </div>
+
+            <!-- Stats Panel -->
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <div class="stat-label">TOPICS_LOADED</div>
+                    <div class="stat-value" id="topics-count">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">LAST_UPDATE</div>
+                    <div class="stat-value" id="last-update">--:--:--</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">API_STATUS</div>
+                    <div class="stat-value" id="api-status">IDLE</div>
+                </div>
+            </div>
+
+            <!-- Forum Content -->
+            <div class="forum-section">
+                <div class="section-title">
+                    <span>LATEST_TOPICS</span>
+                    <span style="color: var(--text-dim); font-size: 0.8em;">[freecodecamp_forum]</span>
+                </div>
+                
+                <div class="forum-controls">
+                    <button class="terminal-btn primary" id="refresh-btn">
+                        <span class="btn-text">REFRESH_DATA</span>
+                    </button>
+                    <button class="terminal-btn" id="filter-btn">
+                        <span class="btn-text">FILTER_CATEGORIES</span>
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="forum-table">
+                        <thead>
+                            <tr>
+                                <th class="col-topic">TOPIC</th>
+                                <th class="col-category">CATEGORY</th>
+                                <th class="col-replies">REPLIES</th>
+                                <th class="col-views">VIEWS</th>
+                                <th class="col-activity">ACTIVITY</th>
+                            </tr>
+                        </thead>
+                        <tbody id="posts-container">
+                            <tr class="loading-row">
+                                <td colspan="5" class="loading-cell">
+                                    <span class="loading-dots">FETCHING LATEST TOPICS</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Footer Stats -->
+            <div class="footer-stats">
+                <span class="stat">LOADED: <span id="loaded-count">0</span> topics</span>
+                <span class="stat">STATUS: <span id="footer-status">CONNECTING</span></span>
+                <span class="stat">API: <span id="api-endpoint">forum-latest</span></span>
+            </div>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
