@@ -46,7 +46,7 @@ Live Demo: https://acheronx0577.github.io/JavaScript-Building-an-fCC-Forum-Leade
 
 ### 1️⃣ Clone this repo
 ```
-git clone git@github.com:acheronx0577/JavaScript-Building-a-Statistics-Calculator.git
+git clone git@github.com:acheronx0577/JavaScript-Building-an-fCC-Forum-Leaderboard.git
 ```
 
 ### 2️⃣ Run the file
