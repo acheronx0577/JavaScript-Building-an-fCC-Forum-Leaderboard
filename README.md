@@ -22,7 +22,7 @@ This repository contains the complete portfolio of projects needed to demonstrat
 
 <img width="1432" height="1169" alt="Screenshot 2025-11-06 110651" src="https://github.com/user-attachments/assets/568bebc6-4601-4ec3-b2a8-9b2962760331" />
 
-Live Demo: https://your-username.github.io/your-repo-name
+Live Demo: https://acheronx0577.github.io/JavaScript-Building-an-fCC-Forum-Leaderboard
 
 ---
 
